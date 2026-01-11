@@ -38,7 +38,10 @@ python manage.py createsuperuser
 python3 manage.py runserver
 ```
 
-8. Открыть http://127.0.0.1:8000/ в браузере
+8. Открыть в браузере
+```bash
+ http://127.0.0.1:8000/
+```
 
 9. Перейти на страницу с отзывами и оставить отзыв
 ```bash
