@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% block content %}
+<h1>{{title}}</h1>
+<div class="post">
+    <h1>Практика №1. Основы Django</h1>
+    <h2>Сначала было непонятно...</h2>   
+    <a href="{% url 'post_1' %}">Подробнее</a>
+    
+</div>
+<div class="post">
+    <h1>Практика №2. Шаблоны</h1>
+    <h2>Стоило мне подумать, что Django это просто...</h2>
+    <a href="{% url 'post_2' %}">Подробнее</a>
+
+</div>
+
+<div class="post">
+    <h1>Практика №3. Модели и формы</h1>
+    <h2>Это было просто</h2>
+    <a href="{% url 'post_3' %}">Подробнее</a>
+</div>
+{% endblock %}

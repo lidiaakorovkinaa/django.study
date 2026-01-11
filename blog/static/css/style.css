@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.container {
+    width: 100%;
+ 
+    margin: 0 auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    grid-template-rows: auto 1fr auto; 
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+    gap: 20px; 
+    flex: 1; 
+}
+
+.header {
+    background: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    grid-area: header;
+    
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+}
+
+.header h1 {
+    color: white;
+    border-bottom: none;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center; 
+    width: 100%; 
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    align-self: start; 
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+}
+
+.nav a:hover {
+    background-color: #2c3e50;
+    color: white;
+    transform: translateX(5px);
+}
+
+.content {
+    grid-area: content;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    min-height: 400px; 
+}
+
+.post {
+    grid-area: content;
+    background: rgb(196, 196, 196);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    min-height: 150px; 
+    margin: 20px; 
+}
+
+.post h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.post h2{
+    font-size: 1 rem;
+    font-weight: 400;
+}
+
+
+
+
+.post:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    grid-area: footer;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.footer  {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    grid-area: footer;
+    text-align: center;
+    margin-top: auto; 
+}
+
+
