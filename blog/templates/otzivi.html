@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>{{title}}</h1>
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="otziv">
+
+    <div>
+        {{ form.full_name }}
+    </div>
+    
+    <div>
+        {{ form.email }}
+    </div>
+
+    <div>
+        {{ form.review_text }}
+    </div>
+    <button type="submit" class="button">Отправить</button>
+    </div>
+    </div>
+ </form>
+<hr>
+
+<h2>Отзывы:</h2>
+{% if reviews %}
+    {% for review in reviews %}
+        <div class="review">
+            <h3>{{ review.full_name }}</h3>
+            <p><strong>Email:</strong> {{ review.email }}</p>
+            <p>{{ review.review_text }}</p>
+            </div>
+            <hr>
+    {% endfor %}
+    
+{% endif %} 
+{% endblock %} 
